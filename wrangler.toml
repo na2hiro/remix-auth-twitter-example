@@ -5,6 +5,7 @@ zone_id = ""
 account_id = ""
 route = ""
 workers_dev = true
+compatibility_date = "2022-01-30"
 
 [site]
 bucket = "./public"
@@ -16,3 +17,7 @@ watch_dir = "build/index.js"
 
 [build.upload]
 format="service-worker"
+
+[vars]
+TWITTER_CONSUMER_KEY = "twitter_consumer_key_here"
+TWITTER_CONSUMER_SECRET = "YOU WOULDNT COMMIT THIS IN CODE, BUT YOUD SET ENV_VAR IN CLOUDFLARE_WORKERS"

@@ -36,6 +36,11 @@ export default function Index() {
                 </p>
             </div>
         )}
+
+        <ul>
+            <li><a href={"https://github.com/na2hiro/remix-auth-twitter"}>na2hiro/remix-auth-twitter</a></li>
+            <li><a href={"https://github.com/na2hiro/remix-auth-twitter-example"}>na2hiro/remix-auth-twitter-example</a></li>
+        </ul>
     </div>
   );
 }

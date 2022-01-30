@@ -1,34 +1,13 @@
-# Welcome to Remix!
+# Remix Auth Twitter example
 
-- [Remix Docs](https://remix.run/docs)
+## Overview
 
-## Development
+This repo demonstrates the basic usage of [remix-auth-twitter](https://github.com/na2hiro/remix-auth-twitter) and deployment to Cloudflare Workers.
 
-You will be running two processes during development:
+## Try it out!
+https://remix-auth-twitter-example.na2hiro.workers.dev
 
-- The Miniflare server (miniflare is a local environment for Cloudflare Workers)
-- The Remix development server
+## How to build
+This repo is based on Remix app template for Cloudflare Workers. Please check [`README_FOR_REMIX.md`](README_FOR_REMIX.md) for the general guide for build and deployment.
 
-```sh
-# in one tab, start the remix dev server
-$ npm run dev
-
-# in another, start the miniflare server
-$ npm start
-```
-
-Open up [http://127.0.0.1:8787](http://127.0.0.1:8787) and you should be ready to go!
-
-If you'd rather run everything in a single tab, you can look at [concurrently](https://npm.im/concurrently) or similar tools to run both processes in one tab.
-
-## Deployment
-
-Use [wrangler](https://developers.cloudflare.com/workers/cli-wrangler) to build and deploy your application to Cloudflare Workers. If you don't have it yet, follow [the installation guide](https://developers.cloudflare.com/workers/cli-wrangler/install-update) to get it setup. Be sure to [authenticate the CLI](https://developers.cloudflare.com/workers/cli-wrangler/authentication) as well.
-
-If you don't already have an account, then [create a cloudflare account here](https://dash.cloudflare.com/sign-up) and after verifying your email address with Cloudflare, go to your dashboard and set up your free custom Cloudflare Workers subdomain.
-
-Once that's done, you should be able to deploy your app:
-
-```sh
-npm run deploy
-```
+The special step you'd need is to have [consumer key and secret](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) issued from Twitter, and put them in the [`wrangler.toml`](wrangler.toml) file.

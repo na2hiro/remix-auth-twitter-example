@@ -20,6 +20,7 @@ export default function Index() {
             <div>
                 <h2>Hello {user.name}</h2>
                 <img src={user.profile_image_url} />
+                <pre>{user.email ? maskEmailAddress(user.email) : "(no email address)"}</pre>
                 <p>You are logged in with Twitter</p>
                 <p>
                     <Form method="post" action="/logout">
@@ -43,4 +44,9 @@ export default function Index() {
         </ul>
     </div>
   );
+}
+
+function maskEmailAddress (email: string) {
+    const parts = email.split("@");
+    return `${parts[0].slice(0, 3)}...@${parts[1]}`;
 }

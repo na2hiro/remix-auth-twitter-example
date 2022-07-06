@@ -5,18 +5,14 @@ zone_id = ""
 account_id = ""
 route = ""
 workers_dev = true
-compatibility_date = "2022-01-30"
+main = "./build/index.js"
+compatibility_date = "2022-07-06"
 
 [site]
 bucket = "./public"
-entry-point = "."
 
 [build]
-command = "npm run build:worker"
-watch_dir = "build/index.js"
-
-[build.upload]
-format="service-worker"
+command = "npm run build"
 
 [vars]
 TWITTER_CONSUMER_KEY = "twitter_consumer_key_here"

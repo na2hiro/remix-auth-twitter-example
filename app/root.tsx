@@ -5,8 +5,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from "remix";
-import type { MetaFunction } from "remix";
+} from "@remix-run/react";
+import {MetaFunction} from "@remix-run/server-runtime";
 
 export const meta: MetaFunction = () => {
   return { title: "remix-auth-twitter Example" };
@@ -25,7 +25,7 @@ export default function App() {
         <Outlet />
         <ScrollRestoration />
         <Scripts />
-        {process.env.NODE_ENV === "development" && <LiveReload />}
+        <LiveReload />
       </body>
     </html>
   );

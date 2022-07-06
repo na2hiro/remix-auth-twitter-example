@@ -1,4 +1,4 @@
-import { createCookieSessionStorage } from "remix";
+import {createCookieSessionStorage} from "@remix-run/cloudflare";
 
 // export the whole sessionStorage object
 export let sessionStorage = createCookieSessionStorage({
